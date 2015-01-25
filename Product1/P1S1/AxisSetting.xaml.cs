@@ -91,6 +91,7 @@ namespace P1S1
             controllerConfiguration.HomingEnable[1] = (bool)AxisYHomingCheckBox.IsChecked;
             controllerConfiguration.HomingEnable[2] = (bool)AxisZHomingCheckBox.IsChecked;
             controllerConfiguration.HomingEnable[3] = (bool)AxisAHomingCheckBox.IsChecked;
+            
             if (HomingDirComboBox.SelectedIndex == 0)
             {
                 controllerConfiguration.HomingDir = true;
