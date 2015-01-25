@@ -1,5 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using EcutControllerTest ;
+using EcutController;
 
 namespace EcutControllerTest
 {
@@ -7,11 +9,14 @@ namespace EcutControllerTest
     public class UnitTest1
     {
         public IntPtr eCutHandler;
-        ECutController eCutController;
+        IEcutService ecutService;
 
-        [TestMethod]
-        public void TestMethod1()
+        [TestInitialize]
+        public void TestInit()
         {
+            ecutService = EcutEntity.GetInstance();          
         }
+
+        
     }
 }
