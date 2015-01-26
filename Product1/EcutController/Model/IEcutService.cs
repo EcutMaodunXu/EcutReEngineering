@@ -5,7 +5,7 @@ using System.Text;
 
 namespace EcutController
 {
-    public interface IEcutService
+    public interface    IEcutService
     {
         bool Open(int num);
         bool Open(ControllerConfigurationStruct controllerConfiguration, OutPutPinSettingStruct outPutPinSettingStruct, int num);

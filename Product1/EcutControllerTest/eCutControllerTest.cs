@@ -24,10 +24,10 @@ namespace EcutControllerTest
             Assert.AreEqual(result , true);
         }
 
-        public void Open(int num) //等官回来确认下。
+        public void Open(int num) 
         {
             var result = ecutService.Open(num);
-            Assert.AreEqual(num , ecutService.GetSumNumberOfEcut());
+            Assert.AreEqual(result , ecutService.IsOpen());
         }
 
         [TestMethod]
@@ -55,7 +55,7 @@ namespace EcutControllerTest
             ecutService.StepsPerUnit = steps;
             for (int i = 0; i < steps.Length - 1; i++)
             {
-                Assert.AreEqual(steps[i] , ecutService.StepsPerUnit[i]);
+                Assert.AreEqual(ecutService.StepsPerUnit[i] , steps[i]);
             }
         }
 
@@ -113,9 +113,10 @@ namespace EcutControllerTest
                 step = ecutService.GetSteps();
                 System.Threading.Thread.Sleep(20);
             }
-            var dpos = ecutService.GetSteps()[0] / ecutService.SmoothCoff / ecutService.StepsPerUnit[0];
-            for (int i = 0; i < postion.Length - 1; i++)
+   
+            for (int i = 0; i < 4; i++)
             {
+                var dpos = ecutService.GetSteps()[i] / ecutService.SmoothCoff / ecutService.StepsPerUnit[i];
                 Assert.AreEqual(postion[i],dpos);
             }
         }
