@@ -49,7 +49,10 @@ namespace EcutControllerTest
             var step = ecutService.GetSteps();
             System.Threading.Thread.Sleep(50);
             var result = ecutService.GetSteps();
-            Assert.AreEqual(result , step);
+            for (int i = 0; i < numOfAxis; i++)
+            {
+                Assert.AreEqual(result[i] , step[i]);
+            }
         }
 
         [TestMethod]
