@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace EcutDemoTest
+namespace UtilityTest
 {
     [TestClass]
-    public class UnitTest1
+    public class UtilityTest
     {
         [TestMethod]
         public void TestMethod1()

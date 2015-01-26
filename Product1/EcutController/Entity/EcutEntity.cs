@@ -190,8 +190,7 @@ namespace EcutController
                 _machinePostion = value;
                 if (_machinePostion == null)
                     _machinePostion = new double[9];
-                eCutDevice.eCutSetCoordinate(eCutHandler, _machinePostion);
-                    
+                eCutDevice.eCutSetCoordinate(eCutHandler, _machinePostion);                    
             }
         }
 
