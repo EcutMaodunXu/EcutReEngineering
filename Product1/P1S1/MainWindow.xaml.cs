@@ -270,6 +270,7 @@ namespace P1S1
             const double valueForDownMove = -9999999;
             double value = 0;
             ushort taskAxis = 0;
+            
             switch ((sender as Button).Name)
             {
                 case "ManualXDown":
